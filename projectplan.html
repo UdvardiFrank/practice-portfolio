@@ -1,0 +1,45 @@
+<DOCTYPE !html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/projectplan2.css" />
+        <title>Portfolio</title>
+      </head>
+      <body>
+        <nav id="navbar" class="nav-colored"><img src="imgs/dlogow.png"><ul><li><a>Home</a></li><li><a>Projects</a></li><li><a>Contact</a></li><li><a>About Me</a></li></ul></nav>
+        <div id="fakenav"></div>
+        <main id="wrapper">
+          <section id="planner-wrap">
+            <div class="checker">
+              <h1 id="project-title">Project Planner</h1><h2>Let's create something awesome together!</h2>
+              <h3 id="aboutyou">About you</h3>
+              <div id="yourinfo">
+                <input required class="input-1" name="name" id="name" type="text" placeholder="Name">
+                <input required class="input-1" name="company" id="company" type="text" placeholder="Company">
+                <input required class="input-1" name="email" id="emailA" type="email" placeholder="Email address">
+                <input required class="input-1" name="phone" id="phoneN" type="text" placeholder="Phone number">
+              </div>
+              <br><br>
+              <h3 id="projectype">Type of Project</h3>
+              <div id="button-cont1"><button class="selected" onclick="selectButton(this)">WEBSITE</button><button onclick="selectButton(this)">APPLICATION</button><button onclick="selectButton(this)">SOMETHING ELSE</button></div>
+              <br><br>
+              <h3 id="desc">Brief Description</h3>
+              <textarea name="description" id="description" cols="30" rows="10" placeholder="Describe your project and objectives..."></textarea>
+              <br><br>
+              <h3 id="projectype">What can I help you with?</h3>
+              <div id="button-cont2"><button onclick="selectButton2(this)">STRATEGY</button><button onclick="selectButton2(this)">DESIGN</button><button onclick="selectButton2(this)">DEVELOPMENT</button><button onclick="selectButton2(this)">OTHER</button></div>
+              <button id="readyup">Ready!</button>
+            </div>
+          </section>
+        </main>
+        <footer><p>Copyright © 2022 Built by Dreamclaw. All rights reserved.</p></footer>
+
+       
+      </body>
+      <!-- Javascript -->
+      <script src="js/script.js"></script>
+    </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="creacionPj.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header id="nav-head"><h1>Creación de Personaje</h1></header>
+      <ul id="nav-ul">
+        <li><a class="nav-link" href="#img-culturas">Selecciona una cultura</a><li>
+        <li><a class="nav-link" href="#What_you_should_already_know">Anota la bendición cultural y lista de habilidades de un personaje</a><li>
+        <li><a class="nav-link" href="#Javascript_and_java">Selecciona dos especialidades</a><li>
+        <li><a class="nav-link" href="#Hello_world">Escoge un trasfondo</a><li>
+        <li><a class="nav-link" href="#Variables">Atributos basicos</a><li>
+        <li><a class="nav-link" href="#Declaring_variables">Selecciona dos rasgos distintivos</a><li>
+        <li><a class="nav-link" href="#Variable_scope">Variable scope</a><li>
+        <li><a class="nav-link" href="#Global_variables">Global variables</a><li>
+        <li><a class="nav-link" href="#Constants">Constants</a><li>
+        <li><a class="nav-link" href="#Data_types">Data types</a><li>
+        <li><a class="nav-link" href="#if....else_statement">if...else statement</a><li>
+        <li><a class="nav-link" href="#while_statement">while statement</a><li>
+        <li><a class="nav-link" href="#Function_declarations">Function declarations</a><li>
+        <li><a class="nav-link" href="#Reference">Reference</a><li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+        <img width="100%" src="imgs/bordermain.png">
+        <section id="main-section">
+                <header><h1>Culturas heroicas</h1></header>
+                <hr>
+                <div id="img-culturas">
+                  <div id="dwarf"></div>
+                  <div id="hobbit"></div>
+                  <div id="elf"></div>
+                  <div id="bard"></div>
+                  <div id="woods"></div>
+                  <div onclick="location.href='#beornculture'" id="beorn"></div>
+                </div>
+                <hr>
+                <h2 id="beornculture">Beornidas</h2>
+                <p>La región a lo largo de la parte superior del río Anduin albergó antaño a muchos humanos, pero su número fue menguando con el paso de los años. Sólo recientemente las tierras alrededor de la Carroca, una isla fluvial de piedra, han empezado a ver a los hombres volver a vigilar el viejo Vado y el camino hasta el paso Alto, en las montañas Nubladas. Aunque pocos en número, rápidamente demostraron a los intrusos que sólo aquellos que eran bienvenidos por Beorn el Cambiaformas podían cruzar el Gran río y conservar la vida. Y Beorn no da la bienvenida a nadie con facilidad ... Cuando Beorn rompió su aislamiento, se convirtió en un líder de los hombres del Norte. Su legendaria ferocidad atrajo a cazadores de montaña y a guerreros sin filiación, que habían perdido a sus familias o abandonado su clan debido a su violento carácter, y también a otros necesitados que apelaron a su naturaleza protectora. Con el tiempo, todo tipo de individuos acudieron a su lado, dando origen a los beórnidas. fieles a las enseñanzas y a la voluntad de su caudillo, protegen los pasos de montaña y el camino que abandona el bosque para cruzar el río Anduin, vigilando a cualquier criatura de dos o de cuatro patas que se atreva a desafiarlos. Tanto los hombres como los elfos y los enanos tienen aún que ganarse la confianza de esta desconfiada gente, y a menudo deben pagar un fuerte peaje para atravesar con seguridad el dominio de los beórnidas.</p>
+                <h3>Bendición Cultural</h3>
+                <div class="blessing">
+                  <h4>-Furioso- </h4>
+                  <p>Un beórnida se ve invadido de una cólera repentina cuando le aciertan en combale y su sangre se derrama. Cuando un beórnida resulta herido en combate, ignora los efeclos de estar cansado duranle la duración del mismo.</p>
+                </div>
+                <h3>Habilidades comunes</h3>
+                <table class="habcomun">
+                        <tbody>
+                                <tr><td>Impresionar <span class="tright">3</span></td><td>Inspirar <span class="tright">1</span></td><td>Persuadir <span class="tright">0</span></td></tr>
+                                <tr><td><span class="underline">Atletismo</span> <span class="tright">2</span></td><td>Viajar <span class="tright">0</span></td><td>Sigilo <span class="tright">0</span></td></tr>
+                                <tr><td>Alerta <span class="tright">2</span></td><td>Perspicacia <span class="tright">3</span></td><td>Buscar <span class="tright">1</span></td></tr>
+                                <tr><td>Explorar <span class="tright">0</span></td><td>Curar <span class="tright">1</span></td><td>Cazar <span class="tright">3</span></td></tr>
+                                <tr><td>Cantar <span class="tright">0</span></td><td>Corlesía <span class="tright">0</span></td><td>Acertijos <span class="tright">1</span></td></tr>
+                                <tr><td>Oficio <span class="tright">1</span></td><td>Guerrear <span class="tright">0</span></td><td>Saber <span class="tright">0</span></td></tr>
+                            </tbody>
+                </table>
+                <h3>Habilidades de Armas</h3>
+                <div class="hab-armas">
+                  <p>(Hachas) 2, lanza 1, daga 1</p><img src="imgs/weapicon.png" alt=""><p><span class="underline">Lanza larga</span> 2, hacha 1, daga 1</p>
+              </div>
+              <h3>Especialidades</h3><p>Cocinar, Montañismo, Narrar, Pescar, Saber (Anduin), Saber de las bestias.</p>
+              <h3>Nivel de vida</h3><p>Los beórnidas se mantienen mediante la cria de ganado y de caballos, y el cuidado de colmenas de grandes 
+               abejas. Recientemente, Beorn ha empezado a pensar en imponer un peaje de paso seguro a todos los viajeros que crucen sus tierras. 
+               De momento, sin embargo, la cultura de los beórnidas tiene el nivel marcial.</p>
+               <div class="como-aventureros">
+                  <h3>Beornidas como aventureros</h3><p>Beorn y sus lugartenientes no pueden oponerse a los muchos jóvenes guerreros que expresan 
+                  su deseo de abandonar su tierra para explorar; muchos beórnidas son gente de natural aventurero, a la que le gusta ver las 
+                  cosas con sus propios ojos. Además, su tendencia a ser campechanos y directos les garantiza un número inacabable de enemigos. 
+                  Sea cual sea la razón para su partida, se espera de que todo beórnida vuelva a casa por lo menos una vez al año, durante el 
+                  solsticio de invierno, par a festejar a petición de Beorn.</p>
+                  <div class="sugerencias-aventura"><p><span class="bold underline">Ocupaciones sugeridas:</span> guardián, vengador. Los beórnidas tienen facilidad par a granjearse 
+                  enemigos, y hay muchos hijos de beórnidas asesinados que buscan venganza. Otros encuentran más inspiración en el talante 
+                  protector de su caudillo.</p><p><span class="bold underline">Ocupación inusual:</span> buscador de tesoros. El oro tiene poco atractivo para los hombres de la 
+                     Carroca, que se sienten más llamados por la gloria o la aventura. </p></div>
+               </div>
+        </section>
+    </main>
+
+    <script>
+
+$(function() {
+   $('#dwarf').hover( function(){
+      $(this).addClass("img-display");
+   },
+   function(){
+      $(this).removeClass("img-display");
+   });
+});
+
+$(function() {
+   $('#hobbit').hover( function(){
+      $(this).addClass("img-display");
+   },
+   function(){
+      $(this).removeClass("img-display");
+   });
+});
+
+$(function() {
+   $('#elf').hover( function(){
+      $(this).addClass("img-display");
+   },
+   function(){
+      $(this).removeClass("img-display");
+   });
+});
+
+$(function() {
+   $('#bard').hover( function(){
+      $(this).addClass("img-display");
+   },
+   function(){
+      $(this).removeClass("img-display");
+   });
+});
+
+$(function() {
+   $('#woods').hover( function(){
+      $(this).addClass("img-display");
+   },
+   function(){
+      $(this).removeClass("img-display");
+   });
+});
+
+$(function() {
+   $('#beorn').hover( function(){
+      $(this).addClass("img-display");
+   },
+   function(){
+      $(this).removeClass("img-display");
+   });
+  });
+
+    </script>
+
+  </body>
+</html>

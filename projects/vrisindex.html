@@ -1,0 +1,386 @@
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>V Rising</title>
+
+        <style type="text/css">
+
+            * {box-sizing:border-box;scroll-behavior:smooth;}
+
+            body {
+                margin:0;
+            }
+
+            nav {
+                position:absolute;
+                background-image:url("imgs/vnav.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                width:100%;
+                height:450px;
+            }
+
+            #navButtons {
+                margin-top:5px;
+                margin-left:80px;
+                height:70px;
+            }
+
+            .buyNow {
+                background-color: transparent;
+                margin:10px;
+                margin-left:380px;
+                padding: 8px;
+                font-size: 28px;
+                border: none;
+                border-radius:5px;
+                color:#C52443;
+                text-shadow: 0px 0px 8px #C52443;
+                transition:1s;
+                position:absolute;
+            }
+
+            .buyNow:hover {
+                box-shadow:0px 3px 10px #C52443;
+                background-image: linear-gradient(to bottom, rgba(255,0,0,0),rgba(255,0,0,0), rgba(255, 0, 0, 0.452));
+                transition:0.3s;
+                cursor:pointer;
+            }
+
+            .baseBtn {
+                background-color: transparent;
+                color: white;
+                margin:10px;
+                margin-right:25px;
+                padding: 12px 18px;
+                font-size: 20px;
+                border: none;
+                border-radius:10px;
+                opacity:0.6;
+                transition:0.8s;
+            }
+
+            .baseBtn:hover {
+                opacity:1;
+                background-image:linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,0), rgba(255, 0, 0, 0.452));
+                cursor:pointer;
+            }
+
+            .dropbtn {
+                background-color: transparent;
+                color: white;
+                margin:10px;
+                margin-right:25px;
+                padding: 12px;
+                font-size: 20px;
+                border: none;
+                border-radius:10px;
+                opacity:0.6;
+                transition:0.8s;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                color:white;
+                font-size:17px;
+                background-color:rgb(31, 31, 41,0.5);
+                border:1px solid rgba(184, 10, 44, 0.6);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: rgb(180, 180, 180);
+                padding: 16px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: rgba(112, 9, 29, 0.5);color:rgb(255, 255, 255);transition:1s;text-shadow: 6px 6px 4px black;text-decoration: none;}
+
+            .dropdown:hover .dropdown-content {display: block;}
+
+            .dropdown:hover .dropbtn {background-image:linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,0), rgba(255, 0, 0, 0.452));opacity:1;}
+
+            #logoNav {margin:80px 0px 0px 25px;}
+
+            .strong {font-weight:bold;}
+
+            .hrDot {border:2px dotted rgba(102, 5, 34, 0.911);margin:432px 0px 0px 0px;background-color:black;}
+
+            #mainBody {
+                width:100%;
+                height:2000px;
+                color:rgba(245, 245, 245, 0.733);
+                position:relative;
+                background-color:#2c080f;
+                display:flex;
+                flex-direction: column;
+            }
+            /*
+            #gameHeader {
+                height:60px;
+                width:100%;
+            }
+            */
+            .gameBox {
+                width:100%;
+                height:400px;
+                background:red;
+                border-bottom: 1px solid gray;
+                opacity:0.5;
+                transition:2s;
+            }
+
+            .gamebox:hover {
+                opacity:1;
+            }
+
+            #gBox1 {background-image: url("imgs/buildyourcastle1.png"); background-position:20% 50%;background-repeat: no-repeat;transition:2s;}
+            #gBox2 {background-image: url("imgs/fearthelight1.png"); background-position:90% 50%;background-repeat: no-repeat;}
+            #gBox3 {background-image: url("imgs/rulethenight1.png"); background-position:30% 50%;background-repeat: no-repeat;}
+            #gBox4 {background-image: url("imgs/joinaclan1.png"); background-position:90% 50%;background-repeat: no-repeat;}
+            #gBox5 {background-image: url("imgs/aworldinconflict1.png"); background-position:0% 50%;background-repeat: no-repeat;}
+
+            #gBox1:hover {background-image: url("imgs/buildyourcastle.png")}
+            #gBox2:hover {background-image: url("imgs/fearthelight.png")}
+            #gBox3:hover {background-image: url("imgs/rulethenight.png")}
+            #gBox4:hover {background-image: url("imgs/joinaclan.png")}
+            #gBox5:hover {background-image: url("imgs/aworldinconflict.png")}
+
+            .boxText1 {
+                color:white;
+                text-align:center;
+                width:600px;
+                position:relative;
+                top:22%;
+                left:40%
+            }
+
+            .boxText p {font-size:120%; font-family:Vampetica}
+
+            .boxText2 {
+                color:white;
+                text-align:center;
+                width:600px;
+                position:relative;
+                top:22%;
+                left:10%;
+            }
+
+            #smokyB {
+                position:relative;
+                margin-top:auto;
+                height:200px;
+                background-image:url("imgs/smoky.png");
+                background-position: center;
+                width:100%;
+                opacity:0.8;
+            }
+
+            footer {
+                background-color:black;
+                color:rgba(255, 255, 255, 0.712);
+                height:350px;
+                display:flex;
+            }
+
+            #footWrap {
+                position:relative;
+                width:1130px;
+                margin-left:100px;
+                bottom:35px;
+            }
+
+            #logoBot {opacity:0.4;transition:1.5s;float:left;margin:0px 250px 20px 0px;}
+            #logoBot:hover {opacity:1;cursor:pointer}
+
+            #socialM {
+                float:left;
+                margin-top:10px;
+                width:630px;
+                height:100px;
+            }
+
+            #socialIcons li {
+                list-style-type: none;
+                display:inline-block;
+                position:relative;
+                bottom:4px;
+                margin-left:15px;
+            }
+
+            #follow {
+                float:left;
+                font-size:150%;
+                line-height: 70px;
+                width:110px;
+                margin-left:110px;
+            }
+
+            .icons {
+                width:50px;
+                height:50px;
+                cursor:pointer;
+                opacity:0.5;
+                transition:1s;
+            }
+
+            .icons:hover {
+                opacity:1;
+            }
+
+            #footMenuW {
+                width:1000px;
+            }
+
+            #footMenu {
+                font-size:115%;
+            }
+
+            th {
+                font-size:120%;
+                padding:13px 100px 15px 0px;
+                color:rgba(255, 255, 255, 0.664);
+                transition:1s;
+            }
+
+            th a {
+                text-decoration:none;
+                transition:3s;
+            }
+
+            th a:hover {
+                border-bottom: 1px solid rgba(184, 10, 44, 0.8);
+                color:rgba(255, 255, 255, 1);
+                cursor:pointer;
+            }
+
+            td {padding-bottom:12px;color:rgba(255, 255, 255, 0.5);}
+
+            td a {
+                text-decoration:none;
+                transition:2s;
+            }
+
+            td a:hover {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+                color:rgb(202, 202, 202);
+                cursor:pointer;
+            }
+        
+        </style>
+
+    </head>
+
+    <body>
+        <nav>
+            <div id="navButtons">
+                <div class="dropdown">
+                    <button class="dropbtn dropdown">The Game</button>
+                    <div class="dropdown-content">
+                        <a href="#gbox1">Build your Castle</a>
+                        <a href="#gbox2">Fear the light</a>
+                        <a href="#gbox3">Rule the night</a>
+                        <a href="#gbox4">Join a clan</a>
+                        <a href="#gbox5">A world in conflict</a>
+                    </div>
+                </div>
+                <button onclick="window.location.href='vrisnews.html'" class="baseBtn dropdown">News</button>
+                <div class="dropdown">
+                    <button class="dropbtn dropdown">Media</button>
+                    <div class="dropdown-content">
+                        <a href="#">Screenshots</a>
+                        <a href="#">Videos</a>
+                        <a href="#">Artwork</a>
+                    </div>
+                </div>
+                <button onclick="window.location.href = 'https://ide.geeksforgeeks.org';" class="baseBtn dropdown">Blog</button>
+                <button onclick="window.location.href = 'https://playvrising.com/';" class="baseBtn dropdown">Official</button>
+                <button onclick="window.location.href = 'https://store.steampowered.com/app/1604030/V_Rising/';" class="buyNow content"> Buy Now</button>
+            <br>
+            <img id="logoNav" src="imgs/vlogo.png" width="450px">
+        </nav>
+
+        <br>
+        <hr class="hrDot">
+
+        <div id="mainBody">
+            <div id="gbox1" class="gameBox">
+                <div class="boxText boxText1">
+                    <h1>Build your castle</h1>
+                    <p>Construct your castle and exhibit your vampiric style. Fill your halls with lavish decor, become the envy of your undead peers, and oversee your domain of darkness from atop your regal throne.</p>
+                </div>
+            </div>
+            <div id="gbox2" class="gameBox">
+                <div class="boxText boxtext2">
+                    <h1>Fear the light</h1>
+                    <p>Lurk in the shadows in the daytime or risk getting burned to ashes by the sunlight. Stalk the night and prey on your victims in the dark. As a vampire, you must quench your thirst for blood while planning your strategies around the day and nighttime.</p>
+                </div>
+            </div>
+            <div id="gbox3" class="gameBox">
+                <div class="boxText boxtext1">
+                    <h1>Rule the Night</h1>
+                    <p>Unleash your powers after dusk and stalk your victims in the dark. Explore an open world together with friends or hunt solo as you pillage villages, raid bandits, and delve into the territories of supernatural beasts.</p>
+                </div>
+            </div>
+            <div id="gbox4" class="gameBox">
+                <div class="boxText boxtext2">
+                    <h1>Join a Clan</h1>
+                    <p>Connect with friends or meet new people and work together towards a common goal. Surrounding clans may become allies or mortal enemies, laying down their lives in defense of their own castle. Stay vigilant to protect your hard earned resources.</p>
+                </div>
+            </div>
+            <div id="gbox5" class="gameBox">
+                <div class="boxText boxText1">
+                    <h1>A world in conflict</h1>
+                    <p>Tailor your vampire to fit your play style by combining weapons with a variety of spells earned through vanquishing powerful foes. Raid other players’ castles or become a diplomat in the game of blood, power, and betrayal. Compete or cooperate - the choice is yours.</p>
+                </div>
+            </div>
+            <div id="smokyB"></div>
+        </div>
+
+        <footer>
+            
+            <div id="footWrap">
+                <img id="logoBot" src="imgs/vlogo.png" onclick="window.location.href = 'https://playvrising.com/';" width="250px">
+                <div id="socialM">
+                    <span id="follow">Follow us:</span>
+                    <ul id="socialIcons">
+                        <li><img class="icons" src="imgs/youtube.png"></li>
+                        <li><img class="icons" src="imgs/insta.png"></li>
+                        <li><img class="icons" src="imgs/facebook.png"></li>
+                        <li><img class="icons" src="imgs/reddit.png"></li>
+                        <li><img class="icons" src="imgs/twitter.png"></li>
+                        <li><img class="icons" src="imgs/twitch.png"></li>
+                    </ul>
+                </div>
+                <br>
+                <hr style="display:block; clear:both">
+                <div id="footMenuW">
+                    <table id="footMenu">
+                        <thead>
+                            <tr><th><a>The Game</a></th><th><a>Media</a></th><th style="padding-right:70px"><a>Community</a></th><th><a>Shop</a></th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><a>Rule the night</a></td><td><a>Screenshots</a></td><td><a>News</a></td><td><a>Buy V Rising</a></td></tr>
+                            <tr><td><a>Build your castle</a></td><td><a>Videos</a></td><td><a>Blog</a></td><td><a>Merchandise</a></td></tr>
+                            <tr><td><a>A world in conflict</a></td><td><a>Artwork</a></td><td><a>Leaderboards</a></td><td><a>Other Games</a></td></tr>
+                            <tr><td><a>Fear the light</a></td><td></td><td><a>Partner program</a></td></tr>
+                            <tr><td><a>Join a clan</a></td><td></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

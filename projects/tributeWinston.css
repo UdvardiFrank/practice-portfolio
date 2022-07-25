@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {width:99.9%;background-color:rgb(212, 212, 212);margin:40px auto 0;border-radius:0.2%;padding:3% 2%;}
+
+.title {margin: 20px auto; text-align:center}
+
+#imageContainer {text-align:center;width:100%;max-height:800px;background-color:white;margin:0 auto;padding:2% 5%;box-shadow: 5px 5px 10px black;}
+
+#image {width:90%}
+
+figcaption {margin-top:20px;font-size:1.2em;color:rgb(36, 36, 36)}
+
+.divider {display:block;border-bottom:4px double rgb(255, 255, 255);padding:20px 0;clear:both;margin:auto auto 20px}
+
+.lg {width:100%}
+
+.md {width:50%}
+
+ul {margin: 1% 0; padding:3% 5%;border-left: 4px double black;border-right: 4px double black;border-radius:5%;transition:1s;overflow:hidden}
+
+ul:hover {transition:1s;background-color:rgba(255, 255, 255, 0.575)}
+
+li {margin: 5% 1% 5% 3%;}
+
+li:hover {text-decoration:underline;}
+
+h3 {text-align:center;text-decoration: underline;}
+
+#timelines {margin:40px auto 30px;text-align:center}
+
+#timeline1, #timeline3 {float:left;margin-left:10%;width:35%;}
+
+#timeline2, #timeline4 {float:right;margin-right:10%;width:35%;}
+
+li > span {font-weight:bold}
+
+#ending {margin:40px auto 0; text-align:center;font-weight: bold;font-size:115%}
+
+a {border-bottom: 1px dotted black;color:rgb(80,80,80);text-decoration: none;} a:hover {text-decoration: underline;color:black}
+
+@media (max-width:700px) {
+    section {width:90%!important;float:none!important;margin:0 auto!important}
+    h1 {font-size:170%} h2 {font-size:140%} #ending {padding-bottom:15px}
+}

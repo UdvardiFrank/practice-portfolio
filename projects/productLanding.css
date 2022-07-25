@@ -1,0 +1,73 @@
+* {margin:0; padding:0; box-sizing: border-box;scroll-behavior: smooth;}
+
+#header {display:grid;grid-template-columns:1fr 1.5fr;position:fixed;height:70px;background:rgb(233, 233, 233);width:100%;
+        align-items:center;overflow:hidden;z-index:2
+}
+
+body {background-color:rgb(43, 43, 43);font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:white}
+
+#nav-bar {text-align:right;margin-right:10%}
+
+#nav-bar a {color:black;text-decoration: none;}
+
+#header h2 {display:inline-block;position:relative;bottom:15px}
+
+#header-img {width:18rem;margin:0 2% 0 10%}
+
+.nav-link {margin:0 3%; font-size:1.1rem}
+
+#wrapper {position:relative;top:90px;padding:0 14%;}
+
+input[type=submit]:hover {cursor:pointer}
+
+main h2 {font-size:1.8rem}
+
+#email {display:block; margin:1rem auto;width:35%;height:2rem;padding:1%}
+
+#submit {width:20%;height:1.8rem;border:1px dashed white;background-color:#ffe138e8;font-weight:bold;font-size:95%}
+
+section {width:100%}
+
+#form {text-align:center;margin-bottom:80px}
+
+#info {display:grid; grid-template-columns: 1fr 4fr; align-items:center;margin-bottom:70px}
+.info-sec2, .info-sec1 {display:grid;grid-template-rows: 1fr 1fr 1fr;row-gap:3rem;height:350px;}
+.info-sec1 {position:relative;top:7px;color:rgba(255, 0, 0, 0.671);justify-items: center;}
+#info .fas, #info i {font-size:60px;display:block}
+
+#videos {width:100%;margin-bottom:70px}
+#video {margin:0 auto;display:block}
+
+#products {display:grid;grid-template-columns: 1fr 1fr 1fr; column-gap:25px;text-align: center;}
+.box {border:1px solid black;}
+.box p {margin:15px auto; padding: 0 5px 0 5px;font-size:0.9rem}
+.box h2 {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:1.8rem;margin:25px auto}
+.boxhead {width:100%; background-color:rgb(240, 240, 240);height:40px;font-size:0.85rem;line-height: 40px;color:black}
+
+.boxbutton {margin:20px 0 20px 0;width:35%;height:1.8rem;border:none;background-color:#ffe138e8;font-size:1.1rem}
+
+footer {background-color:rgba(228, 228, 228, 0.219);margin-top:30px;height:70px; text-align:right;padding:2%}
+footer a {margin-left:10px;font-size:0.95rem;color:rgb(255, 255, 255);text-decoration: none;}
+footer p {font-size:0.85rem;color:rgb(194, 194, 194);margin-top:3px;display:flex;flex-direction: row-reverse;}
+
+@media (max-width:800px) {
+        #nav-bar {display:grid;font-size:0.9rem;text-align:center}
+        #header {grid-template-columns: 1fr 1fr;}
+        #submit {width:30%}
+        #email {width:50%}
+}
+
+@media (max-width:650px) {
+        #wrapper {padding:0 5%}
+        #nav-bar {display:grid;font-size:0.9rem;text-align:center;margin:0}
+        #header {grid-template-columns: 1fr;height:140px;align-content: center;}
+        #logo-wrap {margin:0 auto;position:relative}
+        #header-img {margin:0 auto}
+        #wrapper {top:160px}
+        #submit {font-size:75%}
+        #info {grid-template-columns: 1fr;text-align:center}
+        .info-sec1 {display:none}
+        #products {grid-template-columns: 1fr; row-gap:20px; column-gap:0px;justify-items: center;}
+        .box {width:70%}
+        #video {width:100%}
+}

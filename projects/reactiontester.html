@@ -1,0 +1,87 @@
+<html>
+    <head>
+
+        <title>Javascript</title>
+
+        <style type="text/css">
+
+            .strong {
+                font-weight: bold;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <h1>Test your reactions!</h1>
+
+        <p id="text">Click on the boxes and circles as quick as you can!</p>
+
+        <p class="strong" id="timeTaken"></strong>Your Time:</p>
+
+        <div id="box"></div>
+        
+        <script type="text/javascript">
+
+        var start = new Date().getTime();
+
+        function randomBox () {
+
+        var geoSize = Math.floor(Math.random()*(301 - 75) + 75);
+        var geoPos1 = Math.floor(Math.random()*(400 - 0) + 0);
+        var geoPos2 = Math.floor(Math.random()*(800 - 0) + 0);
+
+        document.getElementById("box").style.width = geoSize;
+        document.getElementById("box").style.height = geoSize;
+        document.getElementById("box").style.marginTop = geoPos1;
+        document.getElementById("box").style.marginLeft = geoPos2;
+
+        var geoRadius = Math.floor(Math.random()*3);
+
+        if (geoRadius == 0) {
+            document.getElementById("box").style.borderRadius = "100%";
+        } else if (geoRadius == 1) {
+            document.getElementById("box").style.borderRadius = "50%";
+        }
+
+        var randomColor = Math.floor(Math.random()*(16777215 - 2) + 2).toString(16);
+        document.getElementById("box").style.backgroundColor = "#" + randomColor;
+
+        start = new Date().getTime();
+
+        }
+
+        var delayInMilliseconds = Math.random()*(1000 - 100) + 100;
+
+        setTimeout(function() {
+
+            randomBox();
+
+        }, delayInMilliseconds);
+
+        document.getElementById("box").onclick = function () {
+
+            document.getElementById("box").style.display = "none";
+
+            var end = new Date().getTime();
+
+            var delayInMilliseconds = Math.random()*(1500 - 100) + 100;
+
+            setTimeout(function() {
+
+                randomBox();
+
+                document.getElementById("box").style.display = "flex";
+
+            }, delayInMilliseconds);
+
+            var elapsedTime = (end - start) / 1000;
+
+            document.getElementById("timeTaken").innerHTML = "Your Time taken: " + elapsedTime;
+
+        }
+
+        </script>
+    </body>
+</html>

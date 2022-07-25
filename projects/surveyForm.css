@@ -1,0 +1,72 @@
+body {
+    z-index: 0;
+    margin:0;
+    font-family:Arial;
+    }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7)
+      ),
+      url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  p {margin:0 0 8px 0}
+  
+  #title, #description {text-align:center; color: white}
+  #title {margin:50px 0 15px 0}
+  #description {font-style:italic;font-size:120%;font-weight:lighter;opacity:0.7}
+  
+  form {
+    color:white;
+    font-size:130%;
+    background-color: rgb(8, 8, 28, 0.7);
+    max-width:650px;
+    min-width:300px;
+    margin:30px auto;
+    width:100vw;
+    padding: 30px 40px;
+    border-radius:5px;
+    }
+  
+  form p {
+    margin: 40px 0 10px 0;
+  }
+  
+  .lighter {font-size:80%;position:relative;
+  bottom:1.2px}
+  
+  input, label, select {display:block}
+  
+  input, textarea, select {width:100%; margin-top:8px;min-height:2em;font-size:90%;border:none;}
+  
+  input, select {padding:0 0 0 15px;border-radius:5px}
+  
+  input:focus {border:2px solid rgb(0, 100, 200)}
+  
+  .firstlabels {margin: 30px auto;}
+  
+  .checks {margin-top:4px;margin-bottom:4px}
+  
+  .inline {display:inline-block;width:unset;margin: 0 0.7em 0 0;vertical-align: middle;position:relative;bottom:2px}
+  
+  select {color:rgb(100,100,100)}
+  select option {color:black}
+  select option:disabled {color:gray}
+  
+  textarea {min-height:100px; padding: 8px;font-size:100%}
+  
+  #submit {background-color:#37AF65; color:white;min-height:2em; margin: 50px 0 20px 0; border-radius:2px}

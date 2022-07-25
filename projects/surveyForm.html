@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="surveyForm.css">
+  </head>
+  <body>
+
+      <h1 id="title">Sigrun Survey Form</h1>
+
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+
+    <form id="survey-form" action='https://register-demo.freecodecamp.org'>
+
+      <label id="name-label" class="firstlabels">Name<input required name="name" id="name" type="text" placeholder="Enter your name"></label>
+
+      <label id="email-label" class="firstlabels">Email<input required name="email" id="email" type="email" placeholder="Enter your email"></label>
+
+      <label id="number-label" class="firstlabels">Age <span class="lighter">(optional)</span><input id="number" required min="13" max="120" type="number" placeholder="Age"></label>
+
+      <p>Which option best describes your current role?</p>
+        <select id="dropdown">
+          <option disabled selected value="">Select current role</option>
+          <option value="student">Student</option>
+          <option value="fullTimeJ">Full Time Job</option>
+          <option value="fullTimeL">Full Time Learner</option>
+          <option value="notSay">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+      <p>Would you recommend freeCodeCamp to a friend?</p>
+        <label class="checks"><input class="inline" name="recom" value="definitely" type="radio">Definitely</label>
+        <label class="checks"><input class="inline" name="recom" value="maybe" type="radio">Maybe</label>
+        <label class="checks"><input class="inline" name="recom" value="notSure" type="radio">Not sure</label>
+
+      <p>Which option best describes your current role?</p>
+        <select>
+          <option disabled selected value="">Select current role</option>
+          <option>Challenges</option>
+          <option>Projects</option>
+          <option>Community</option>
+          <option>Open source</option>
+        </select>
+
+      <p>What would you like to see improved? <span class="lighter">(Check all that apply)</span></p>
+      <label class="checks"><input class="inline" type="Checkbox" value="frontEnd">Front-end Projects</label>
+      <label class="checks"><input class="inline" type="Checkbox" value="backEnd">Back-end Projects</label>
+      <label class="checks"><input class="inline" type="Checkbox" value="dataVis">Data Visualization</label>
+      <label class="checks"><input class="inline" type="Checkbox" value="challenges">Challenges</label>
+      <label class="checks"><input class="inline" type="Checkbox" value="openSource">Open Source Community</label>
+      <label class="checks"><input class="inline" type="Checkbox" value="gitterHelp">Gitter help rooms</label>
+      <label class="checks"><input class="inline" type="Checkbox" value="videos">Videos</label>
+      <label class="checks"><input class="inline" type="Checkbox" value="meetUps">City Meetups</label>
+      <label class="checks"><input class="inline" type="Checkbox" value="wiki">Wiki</label>
+      <label class="checks"><input class="inline checks" type="Checkbox" value="forum">Forum</label>
+      <label class="checks"><input class="inline checks" type="Checkbox" value="addCourses">Additional Courses</label>
+
+      <p>Any comments or suggestions?</p>
+<textarea placeholder="Enter your comment here..."></textarea>
+
+      <input id="submit" type="submit" value="Submit">
+    </form>
+
+  </body>
+<html>

@@ -1,0 +1,522 @@
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>V Rising</title>
+
+        <style type="text/css">
+
+            body {
+                margin:0;
+            }
+
+            nav {
+                position:absolute;
+                background-image:url("imgs/vnav.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                width:100%;
+                height:450px;
+            }
+
+            #navButtons {
+                margin-top:5px;
+                margin-left:80px;
+            }
+
+            .buyNow {
+                background-color: transparent;
+                margin:10px;
+                margin-left:380px;
+                padding: 8px;
+                font-size: 28px;
+                border: none;
+                border-radius:5px;
+                color:#C52443;
+                text-shadow: 0px 0px 8px #C52443;
+                transition:1s;
+                position:absolute;
+            }
+
+            .buyNow:hover {
+                box-shadow:0px 3px 10px #C52443;
+                background-image: linear-gradient(to bottom, rgba(255,0,0,0),rgba(255,0,0,0), rgba(255, 0, 0, 0.452));
+                transition:0.3s;
+                cursor:pointer;
+            }
+
+            .baseBtn {
+                background-color: transparent;
+                color: white;
+                margin:10px;
+                margin-right:25px;
+                padding: 12px 18px;
+                font-size: 20px;
+                border: none;
+                border-radius:10px;
+                opacity:0.6;
+                transition:0.8s;
+            }
+
+            .baseBtn:hover {
+                opacity:1;
+                background-image:linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,0), rgba(255, 0, 0, 0.452));
+                cursor:pointer;
+            }
+
+            .dropbtn {
+                background-color: transparent;
+                color: white;
+                margin:10px;
+                margin-right:25px;
+                padding: 12px;
+                font-size: 20px;
+                border: none;
+                border-radius:10px;
+                opacity:0.6;
+                transition:0.8s;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                color:white;
+                font-size:17px;
+                background-color:rgb(31, 31, 41,0.5);
+                border:1px solid rgba(184, 10, 44, 0.6);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: rgb(180, 180, 180);
+                padding: 16px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: rgba(112, 9, 29, 0.5);color:rgb(255, 255, 255);transition:1s;text-shadow: 6px 6px 4px black;text-decoration: none;}
+
+            .dropdown:hover .dropdown-content {display: block;}
+
+            .dropdown:hover .dropbtn {background-image:linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,0), rgba(255, 0, 0, 0.452));opacity:1;}
+
+            #logoNav {margin:80px 0px 0px 25px;}
+
+            .strong {font-weight:bold;}
+
+            #mainBody {
+                width:100%;
+                height:1150px;
+                color:rgba(245, 245, 245, 0.733);
+                position:relative;
+                background-color:rgba(10, 13, 20, 0.658);
+                display:flex;
+                flex-direction: column;
+            }
+
+            #mainBody::after {
+                content: "";
+                background: url(imgs/vnav2.jpg);
+                opacity: 0.85;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                z-index: -1;   
+                }
+
+            #mainWrapper {
+                margin-left:100px;
+                width:1130px;
+                height:950px;
+            }
+
+            #news {
+                width:700px;
+                position:relative;
+                margin:0 auto;
+                float:left;
+                font-family:Vampetica;
+            }
+
+            h2 {
+                margin:0;
+                font-size:175%;
+            }
+
+            #newsTop {
+                margin:25px 0px 20px 27px;
+            }
+
+            .newsSize {
+                float:left;
+                margin-bottom:40px;
+                border-top: 2px solid;
+                border-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(206, 206, 206, 0.1)) 1;
+            }
+
+            .date {
+                float:left;
+                width: 80px;
+                padding-top:10px;
+                height: 120px;
+                background-image:linear-gradient(to bottom left, rgba(255, 255, 255, 0.6), rgba(255,0,0,0), rgba(255,0,0,0), rgba(255, 0, 0, 0.0));
+                text-align:center;
+                font-family:'Times New Roman', Times, serif;
+            }
+
+            .nDate {font-size: 30px;font-weight: bold;}
+
+            .linkeable {
+                width:650px;
+                cursor:pointer;
+                margin-top:12px;
+                margin-left:100px;
+                font-size:25px;
+            }
+
+            .arrow {
+                height:18px;
+                float:right;
+                margin-top:5px;
+            }
+
+            .suppNews {
+                font-size:18px;
+                margin:15px 0px 0px 100px;
+                height:80px;
+            }
+
+            .linkMore2 {
+                font-size:20px;
+            }
+
+            p {margin:0px 0px 15px 0px}
+
+            .allNews {
+                margin-left:100px;
+                display:block; 
+                clear:both;
+                font-size:20px;
+                font-weight:bold;
+                position:relative;
+                bottom:25px;
+                z-index:3;
+            }
+
+            #mainBody a {
+                text-decoration: none;
+                color:#d82045;
+            }
+
+            #mainBody a:hover {text-decoration:underline;;color:#d82045;}
+
+            a:visited {color:#d82045;}
+
+            #otherNewsWrap {
+                position:relative;
+                float:right;
+                width:300px;
+                margin-top:30px;
+                margin-bottom:100px;
+                text-align:center;
+                height:880px;
+            }
+
+            .otherNews {
+                width:300px;
+                height:300px;
+                box-shadow:5px 5px 12px #fcfcfc63;
+                margin-bottom:50px;
+            }
+
+            .otherText {
+                padding:0px 20px;
+                margin: 10px 0px 0px 0px;
+            }
+
+            .otherImg {
+                margin-bottom:10px;
+            }
+
+            .hrDot {border:2px dotted rgba(102, 5, 34, 0.911);margin:432px 0px 0px 0px;background-color:black;}
+
+            #smokyB {
+                position:relative;
+                height:200px;
+                background-image:url("imgs/smoky.png");
+                background-position: center;
+                width:100%;
+                opacity:0.8;
+            }
+
+            footer {
+                background-color:black;
+                color:rgba(255, 255, 255, 0.712);
+                height:350px;
+                display:flex;
+            }
+
+            #footWrap {
+                position:relative;
+                width:1130px;
+                margin-left:100px;
+                bottom:35px;
+            }
+
+            #logoBot {opacity:0.4;transition:1.5s;float:left;margin:0px 250px 20px 0px;}
+            #logoBot:hover {opacity:1;cursor:pointer}
+
+            #socialM {
+                float:left;
+                margin-top:10px;
+                width:630px;
+                height:100px;
+            }
+
+            #socialIcons li {
+                list-style-type: none;
+                display:inline-block;
+                position:relative;
+                bottom:4px;
+                margin-left:15px;
+            }
+
+            #follow {
+                float:left;
+                font-size:150%;
+                line-height: 70px;
+                width:110px;
+                margin-left:110px;
+            }
+
+            .icons {
+                width:50px;
+                height:50px;
+                cursor:pointer;
+                opacity:0.5;
+                transition:1s;
+            }
+
+            .icons:hover {
+                opacity:1;
+            }
+
+            #footMenuW {
+                width:1000px;
+            }
+
+            #footMenu {
+                font-size:115%;
+            }
+
+            th {
+                font-size:120%;
+                padding:13px 100px 15px 0px;
+                color:rgba(255, 255, 255, 0.664);
+                transition:1s;
+            }
+
+            th a {
+                text-decoration:none;
+                transition:3s;
+            }
+
+            th a:hover {
+                border-bottom: 1px solid rgba(184, 10, 44, 0.8);
+                color:rgba(255, 255, 255, 1);
+                cursor:pointer;
+            }
+
+            td {padding-bottom:12px;color:rgba(255, 255, 255, 0.5);}
+
+            td a {
+                text-decoration:none;
+                transition:2s;
+            }
+
+            td a:hover {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+                color:rgb(202, 202, 202);
+                cursor:pointer;
+            }
+        
+        </style>
+
+    </head>
+
+    <body>
+        
+        <nav>
+            <div id="navButtons">
+                <div class="dropdown">
+                    <button class="dropbtn dropdown">The Game</button>
+                    <div class="dropdown-content">
+                        <a href="#">Rule the night</a>
+                        <a href="#">Build your Castle</a>
+                        <a href="#">Fear the light</a>
+                    </div>
+                </div>
+                <button class="baseBtn dropdown">News</button>
+                <div class="dropdown">
+                    <button class="dropbtn dropdown">Media</button>
+                    <div class="dropdown-content">
+                        <a href="#">Screenshots</a>
+                        <a href="#">Videos</a>
+                        <a href="#">Artwork</a>
+                    </div>
+                </div>
+                <button onclick="window.location.href = 'https://ide.geeksforgeeks.org';" class="baseBtn dropdown">Blog</button>
+                <button onclick="window.location.href = 'https://playvrising.com/';" class="baseBtn dropdown">Official</button>
+                <button onclick="window.location.href = 'https://store.steampowered.com/app/1604030/V_Rising/';" class="buyNow content"> Buy Now</button>
+            <br>
+            <img id="logoNav" src="imgs/vlogo.png" width="450px">
+        </nav>
+
+        <br>
+        <hr class="hrDot">
+
+        <div id="mainBody">
+            <div id="mainWrapper">
+                <div id="news">
+                    <h2 id="newsTop">News</h2>
+                    <div class="newsSize">
+                        <div class="date">
+                            <span class="nDate">20</span>
+                            <br>
+                            <span class="nMonth">May</span>
+                        </div>
+                        <div class="linkeable">
+                            <span class="strong">The latest Vampire gear is here</span>
+                            <img src="imgs/arrow.png" class="arrow">
+                        </div>
+                        <div class="suppNews">
+                            <p>Customize your vampire to fit your play style by combining weapons with a variety of spells.</p>
+                            <a href="news.html" class="linkMore">Read More</a>
+                        </div>
+                    </div>
+                    <div class="newsSize">
+                        <div class="date">
+                            <span class="nDate">19</span>
+                            <br>
+                            <span class="nMonth">May</span>
+                        </div>
+                        <div class="linkeable">
+                            <span class="strong">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                            <img src="imgs/arrow.png" class="arrow">
+                        </div>
+                        <div class="suppNews">
+                            <p>Suspendisse et blandit ante. Maecenas turpis sem, porta non blandit id, scelerisque quis eros.</p>
+                            <a href="news.html" class="linkMore">Read More</a>
+                        </div>
+                    </div>
+                    <div class="newsSize">
+                        <div class="date">
+                            <span class="nDate">18</span>
+                            <br>
+                            <span class="nMonth">May</span>
+                        </div>
+                        <div class="linkeable">
+                            <span class="strong">Integer ut vehicula quam, sed cursus mi.</span>
+                            <img src="imgs/arrow.png" class="arrow">
+                        </div>
+                        <div class="suppNews">
+                            <p>Nulla tellus nunc, imperdiet at risus et, varius volutpat purus.</p>
+                            <a href="news.html" class="linkMore">Read More</a>
+                        </div>
+                    </div>
+                    <div class="newsSize">
+                        <div class="date">
+                            <span class="nDate">17</span>
+                            <br>
+                            <span class="nMonth">May</span>
+                        </div>
+                        <div class="linkeable">
+                            <span class="strong">Vestibulum pellentesque, neque a venenatis lacinia,</span>
+                            <img src="imgs/arrow.png" class="arrow">
+                        </div>
+                        <div class="suppNews">
+                            <p>Vivamus sed gravida lectus, vitae posuere felis. Donec sed ipsum neque. Proin sagittis varius tellus at tristique.</p>
+                            <a href="news.html" class="linkMore">Read More</a>
+                        </div>
+                    </div>
+                    <div class="newsSize">
+                        <div class="date">
+                            <span class="nDate">16</span>
+                            <br>
+                            <span class="nMonth">May</span>
+                        </div>
+                        <div class="linkeable">
+                            <span class="strong">Proin eget metus magna.</span>
+                            <img src="imgs/arrow.png" class="arrow">
+                        </div>
+                        <div class="suppNews">
+                            <p>Maecenas velit augue, sodales et porttitor vitae, rhoncus nec augue.</p>
+                            <a href="news.html" class="linkMore">Read More</a>
+                        </div>
+                    </div>
+                    <a href="news.html" class="allNews">All News</a>
+                </div>
+                <div id="otherNewsWrap">
+                    <div class="otherNews">
+                        <iframe style="margin-bottom:15px" width="300" height="150" src="https://www.youtube.com/embed/r9aaaHhajv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="otherText" style="color:white">The multiplayer vampire action-RPG V Rising is officially launching for PC, and developers at Stunlock are celebrating with a new trailer.</p>
+                        <br>
+                        <a href="news.html" class="linkMore2">Read More</a>
+                    </div>
+                    <div class="otherNews">
+                        <img class="otherImg" src="imgs/12.jpg" width="300px" height="150">
+                        <p class="otherText" style="color:white">Lure victims back to your castle and convert them into your undead minions. Your loyal servants will lay down their lives in defense of your manor.</p>
+                        <br>
+                        <a href="news.html" class="linkMore2">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div id="smokyB"></div>
+        </div>
+
+        <footer>
+            
+            <div id="footWrap">
+                <img id="logoBot" src="imgs/vlogo.png" onclick="window.location.href = 'https://playvrising.com/';" width="250px">
+                <div id="socialM">
+                    <span id="follow">Follow us:</span>
+                    <ul id="socialIcons">
+                        <li><img class="icons" src="imgs/youtube.png"></li>
+                        <li><img class="icons" src="imgs/insta.png"></li>
+                        <li><img class="icons" src="imgs/facebook.png"></li>
+                        <li><img class="icons" src="imgs/reddit.png"></li>
+                        <li><img class="icons" src="imgs/twitter.png"></li>
+                        <li><img class="icons" src="imgs/twitch.png"></li>
+                    </ul>
+                </div>
+                <br>
+                <hr style="display:block; clear:both">
+                <div id="footMenuW">
+                    <table id="footMenu">
+                        <thead>
+                            <tr><th><a>The Game</a></th><th><a>Media</a></th><th style="padding-right:70px"><a>Community</a></th><th><a>Shop</a></th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><a>Rise from your grave</a></td><td><a>Screenshots</a></td><td><a>News</a></td><td><a>Buy V Rising</a></td></tr>
+                            <tr><td><a>Rule the night</a></td><td><a>Videos</a></td><td><a>Blog</a></td><td><a>Merchandise</a></td></tr>
+                            <tr><td><a>Fear the light</a></td><td><a>Artwork</a></td><td><a>Leaderboards</a></td><td><a>Other Games</a></td></tr>
+                            <tr><td><a>A world in conflict</a></td><td></td><td><a>Partner program</a></td></tr>
+                            <tr><td><a>Build your castle</a></td><td></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
