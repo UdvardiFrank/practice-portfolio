@@ -22,25 +22,24 @@ select {background-color:rgb(236, 230, 189);border:none}
 #main-doc {margin-left:20%;padding:0;position:absolute;
 background-color:#1F1610;color:rgb(255, 251, 224);font-size:103%;text-align: center;width:80%}
 
-#main-section {padding:0 40px}
+.section-pad {padding:0 40px}
 
+.border2{width:100%; margin:10px auto 20px}
 hr {border-color:rgba(158, 0, 0, 0.897); margin:20px auto}
 
 #img-culturas {width:100%;height:650px;border-radius:10px 10px 0 0;background-image: url(imgs/culturas/culturas3.png);background-size:cover;
   background-repeat: no-repeat;transition: all 0.5 ease;position:relative}
+#img-culturas1, #img-culturas2, #img-culturas3, #img-culturas4, #img-culturas5, #img-culturas6 {width:100%;height:650px;border-radius:10px 10px 0 0;position:absolute; background-size:cover; top:0;left:0;bottom:0;right:0;
+  background-repeat: no-repeat; display:none}
 
-#dwarf {width:225px;height:300px;position:absolute;bottom:3.5%;left:0.7%;background-image: url(imgs/culturas/dwarf.png)!important;
-  background-size:cover;background-repeat: no-repeat;opacity:0} #dwarf:hover {cursor:pointer}
-#hobbit {width:160px;height:130px;position:absolute;top:200px;left:100px; background-image: url(imgs/culturas/hobbit.png)!important;
-  background-size:cover;background-repeat: no-repeat;opacity:0;z-index:5} #hobbit:hover {cursor:pointer}
-#elf {width:160px;height:575px;position:absolute;top:25px;left:225px; background-image: url(imgs/culturas/elf.png)!important;
-  background-size:cover;background-repeat: no-repeat;opacity:0;z-index:4} #elf:hover {cursor:pointer}
-#bard {width:305px;height:472px;position:absolute;bottom:1%;left:335px; background-image: url(imgs/culturas/bard.png)!important;
-  background-size:cover;background-repeat: no-repeat;opacity:0;z-index:3} #bard:hover {cursor:pointer}
-#woods {width:310px;height:287px;position:absolute;top:17px;left:372px; background-image: url(imgs/culturas/woods.png)!important;
-  background-size:cover;background-repeat: no-repeat;opacity:0} #woods:hover {cursor:pointer}
-#beorn {width:285px;height:450px;position:absolute;bottom:70px;right:168px; background-image: url(imgs/culturas/beorn.png)!important;
-  background-size:cover;background-repeat: no-repeat;opacity:0} #beorn:hover {cursor:pointer}
+.culture-sym {width:10%; margin:20px auto 0}
+
+#dwarf {width:225px;height:300px;position:absolute;bottom:3.5%;left:0.7%; opacity:0} #dwarf:hover {cursor:pointer}
+#hobbit {width:160px;height:130px;position:absolute;top:200px;left:100px; opacity:0;z-index:5} #hobbit:hover {cursor:pointer}
+#elf {width:160px;height:575px;position:absolute;top:25px;left:225px; opacity:0;z-index:4} #elf:hover {cursor:pointer}
+#bard {width:305px;height:472px;position:absolute;bottom:1%;left:335px; opacity:0;z-index:3} #bard:hover {cursor:pointer}
+#woods {width:290px;height:207px;position:absolute;top:17px;left:392px; opacity:0; z-index:5} #woods:hover {cursor:pointer}
+#beorn {width:285px;height:450px;position:absolute;bottom:70px;right:168px; opacity:0} #beorn:hover {cursor:pointer}
 
 #main-doc p, #main-doc li {font-size:105%;margin:10px auto}
 
@@ -62,11 +61,17 @@ hr {border-color:rgba(158, 0, 0, 0.897); margin:20px auto}
 .bold {font-weight: bold;}
 .underline {text-decoration: underline;}
 .tright {float: right;}
+.sm-bigger {font-size: 120%!important}
 
 .hab-armas img {width:30px;height:30px} .hab-armas {width:60%;height:50px;margin:0 auto;display: flex; flex-direction: row; justify-content: center;align-items:center;border:1px solid rgb(255, 251, 224,0.75)}
 .hab-armas p {width:50%;margin:5px auto!important}
 
-.como-aventureros {border: 3px double rgb(255, 251, 224); margin:35px 0; padding: 0 3% 2%}
+.como-aventureros {border: 3px double rgb(255, 251, 224); margin:35px 0; padding: 0 3% 2%; background-size: 400% 400%!important; animation: gradient 15s ease-out infinite}
+.c-a-1 {background: linear-gradient(-45deg, #1F1610, rgba(223, 215, 100, 0.308), #1F1610);}
+.c-a-2 {background: linear-gradient(-45deg, #1F1610, rgba(119, 206, 192, 0.438), #1F1610)}
+.c-a-3 {background: linear-gradient(-45deg, #1F1610, rgba(180, 68, 68, 0.342), #1F1610)}
+.c-a-4 {background: linear-gradient(-45deg, #1F1610, rgba(75, 170, 80, 0.342), #1F1610)}
+
 .sugerencias-aventura {display:flex; flex-direction: row; align-items: flex-start; justify-content: space-evenly;}
 .sugerencias-aventura p {width:40%;}
 
@@ -80,5 +85,26 @@ hr {border-color:rgba(158, 0, 0, 0.897); margin:20px auto}
   }
 
 /* Culture Selection Images */
-.img-display {opacity:1!important}
+.imgdisp1 {background-image: url(imgs/culturas/culturasEE.png)!important} .imgdisp2 {background-image: url(imgs/culturas/culturasHC.png)!important}
+.imgdisp3 {background-image: url(imgs/culturas/culturasEBN.png)!important} .imgdisp4 {background-image: url(imgs/culturas/culturasHB.png)!important}
+.imgdisp5 {background-image: url(imgs/culturas/culturasHBTA.png)!important} .imgdisp6 {background-image: url(imgs/culturas/culturasB.png)!important}
 
+.loquedice {display:flex; justify-content: space-evenly;}
+.loquedicetext {width:50%;display:flex; flex-direction:column; justify-content: space-evenly;}
+.loquedicetext p {font-size:100%!important;text-align: left;}
+
+#beorn-img, #thrand-img, #dain-img, #bilbo-img, #bard-img, #radagast-img {width:45%;border-radius:20px;}
+#beorn-img {border:3px ridge rgba(214, 202, 132, 0.525)} #thrand-img {border:3px ridge rgba(132, 214, 193, 0.525)} #dain-img {border:3px ridge rgba(180, 68, 68, 0.525)}
+#bilbo-img {border:3px ridge rgba(75, 170, 80, 0.525)}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

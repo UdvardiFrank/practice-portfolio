@@ -1,2 +1,2 @@
 # practice-portfolio
-On going  practice projects
+On going practice projects
