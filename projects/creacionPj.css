@@ -63,7 +63,7 @@ hr {border-color:rgba(158, 0, 0, 0.897); margin:20px auto}
 .tright {float: right;}
 .sm-bigger {font-size: 120%!important}
 
-.hab-armas img {width:30px;height:30px} .hab-armas {width:60%;height:50px;margin:0 auto;display: flex; flex-direction: row; justify-content: center;align-items:center;border:1px solid rgb(255, 251, 224,0.75)}
+.hab-armas img {width:30px;height:30px} .hab-armas {width:72%;height:50px;margin:0 auto;display: flex; flex-direction: row; justify-content: center;align-items:center;border:1px solid rgb(255, 251, 224,0.75)}
 .hab-armas p {width:50%;margin:5px auto!important}
 
 .como-aventureros {border: 3px double rgb(255, 251, 224); margin:35px 0; padding: 0 3% 2%; background-size: 400% 400%!important; animation: gradient 15s ease-out infinite}
@@ -71,6 +71,8 @@ hr {border-color:rgba(158, 0, 0, 0.897); margin:20px auto}
 .c-a-2 {background: linear-gradient(-45deg, #1F1610, rgba(119, 206, 192, 0.438), #1F1610)}
 .c-a-3 {background: linear-gradient(-45deg, #1F1610, rgba(180, 68, 68, 0.342), #1F1610)}
 .c-a-4 {background: linear-gradient(-45deg, #1F1610, rgba(75, 170, 80, 0.342), #1F1610)}
+.c-a-5 {background: linear-gradient(-45deg, #1F1610, rgba(223, 17, 17, 0.525), #1F1610)}
+.c-a-6 {background: linear-gradient(-45deg, #1F1610, rgba(81, 203, 207, 0.525), #1F1610)}
 
 .sugerencias-aventura {display:flex; flex-direction: row; align-items: flex-start; justify-content: space-evenly;}
 .sugerencias-aventura p {width:40%;}
@@ -95,7 +97,7 @@ hr {border-color:rgba(158, 0, 0, 0.897); margin:20px auto}
 
 #beorn-img, #thrand-img, #dain-img, #bilbo-img, #bard-img, #radagast-img {width:45%;border-radius:20px;}
 #beorn-img {border:3px ridge rgba(214, 202, 132, 0.525)} #thrand-img {border:3px ridge rgba(132, 214, 193, 0.525)} #dain-img {border:3px ridge rgba(180, 68, 68, 0.525)}
-#bilbo-img {border:3px ridge rgba(75, 170, 80, 0.525)}
+#bilbo-img {border:3px ridge rgba(75, 170, 80, 0.525)} #bard-img {border:3px ridge rgba(223, 17, 17, 0.525)} #radagast-img {border:3px ridge rgba(81, 203, 207, 0.525)}
 
 @keyframes gradient {
 	0% {
